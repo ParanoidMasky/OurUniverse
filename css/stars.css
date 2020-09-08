@@ -1,0 +1,261 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700,800,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+section {
+    z-index: -5;
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    background: #000200;
+    justify-content: center;
+}
+
+ .head {
+    color: transparent;
+    font-weight: 200;
+    font-size: 4em;
+    -webkit-text-stroke: 2px #fff;
+    text-transform: uppercase;
+}
+
+h3 {
+    color: transparent;
+    font-weight: 200;
+    font-size: 2em;
+    -webkit-text-stroke: 2px #fff;
+    text-transform: uppercase;
+}
+
+p {
+    color: white;
+}
+
+.cuerpo {
+    padding-left: 70px;
+    padding-right: 70px;
+    padding-top: 15px;
+    padding-bottom: 20px;
+}
+
+section .star {
+    z-index: -5;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    animation: animate 8s ease-in-out infinite, backgroundmove 16s linear infinite;
+}
+
+section .star.star1 {
+    animation-delay: 0s;
+    background: url(../stars/star1.png);
+}
+
+section .star.star2 {
+
+    animation-delay: -1s;
+    background: url(../stars/star2.png);
+}
+
+section .star.star3 {
+
+    animation-delay: -2s;
+    background: url(../stars/star3.png);
+}
+
+section .star.star4 {
+
+    animation-delay: -3s;
+    background: url(../stars/star4.png);
+}
+
+section .star.star5 {
+
+    animation-delay: -4s;
+    background: url(../stars/star5.png);
+}
+
+section .star.star6 {
+
+    animation-delay: -5s;
+    background: url(../stars/star6.png);
+}
+
+section .star.star7 {
+
+    animation-delay: -6s;
+    background: url(../stars/star7.png);
+}
+
+section .star.star8 {
+
+    animation-delay: -7s;
+    background: url(../stars/star8.png);
+}
+
+.galeria img {
+    width: 100px;
+    height: auto;
+
+}
+
+.descripcion {
+    padding: 15px;
+    text-align: center;
+    color: white;
+}
+
+.tabla {
+    padding: 0 6px;
+    float: left;
+    width: 25%;
+}
+
+.img-area {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.img-container {
+    position: relative;
+    margin:  0 auto;
+    max-width: 400px;
+}
+
+.img-gift {
+    padding: 20px 20px 20px;
+    position: absolute;
+    top:0;
+    left:0;
+    overflow: hidden;
+    opacity: 0;
+    transition: opacity .5s linear;
+}
+
+.img-container .img-const {
+    padding: 20px 20px 20px;
+    z-index: 9999;
+    transition: opacity .5s linear;
+    cursor: pointer;
+
+}
+
+.img-gift:hover{
+    opacity: 1;
+
+}
+
+.pensamientos {
+    width: 900px;
+    min-height:  1200px;
+    background:  #fff;
+    margin:  70px auto 0;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.box {
+    position: relative;
+    overflow: hidden;
+    width: 300px;
+    height: 300px;
+    background: #ff0;
+    margin: 10px;
+    box-sizing: border-box;
+    display:  inline-block;
+}
+
+.img-dream {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    max-width: 100%;
+    max-height: 100%;
+    display: block;
+    transition: transform 2s;
+}
+
+.img-dream:hover {
+    transform: scale(1.2);
+}
+
+.desc {
+    position: absolute;
+    top: 10px;
+    bottom: 10px;
+    left: 10px;
+    right: 10px;
+    background: rgba(0, 0, 0, .8);
+}
+
+.desc .img-dream:hover .desc {
+    transform: scaleY(1);
+}
+
+.dreams {
+    position: absolute;
+    transform: translateY(-50%);
+    text-align: center;
+    padding: 15px;
+    color: #9F55FF;
+    top: 50%;
+}
+
+.dreams h4 {
+    margin: 10px 0 0;
+    padding: 0;
+    padding-bottom: 5px;
+}
+
+.dreams p {
+    margin: 0;
+    padding: 0;
+    font-size: #;
+}
+
+@keyframes animate {
+    0%, 20%, 40%, 60%, 80%, 100%{
+        opacity: 0;
+    }
+
+    10%, 30%, 50%, 70%, 90%{
+        opacity: 1;
+    }
+}
+
+@keyframes backgroundmove {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(2);
+    }
+}
+
+@media only screen and (max-width: 700px){
+    .tabla{
+        width: 50%;
+        margin: 6px 0;
+    }
+}
+
+@media only screen and (max-width: 500px){
+    .tabla{
+        width: 100%;
+    }
+}
